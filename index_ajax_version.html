@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php-ajax-version</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containerBox">
+
+        <div id="logoBox">
+            <img id="logo" src="https://grafica-facile.com/wp-content/uploads/2022/01/spotify-logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="containerBox" id="app">
+        <div>
+            <div class="row">
+                <div class="box" v-for="(album, index) in arreyAlbum">
+                    <img :src="album.poster" alt="">
+                    <h2>{{album.title}}</h2>
+                    <h4>{{album.author}}</h4>
+                    <h4>{{album.year}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
